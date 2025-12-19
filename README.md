@@ -22,22 +22,23 @@ This template is designed to be cloned and extended for personal projects, produ
 
 src/
 ├─ api/
-│ ├─ routes/ Route definitions (HTTP layer)
-│ ├─ controllers/ Request orchestration
-│ ├─ services/ DB fetching
-│ └─ config/ External services (DB, env, etc.)
+│  ├─ routes/        # Route definitions (HTTP layer)
+│  ├─ controllers/   # Request orchestration
+│  ├─ services/      # Business logic / DB access
+│  └─ config/        # External services (DB, env, etc.)
 │
 ├─ middleware/
-│ ├─ errorHandler.js
-│ └─ rateLimiter.js
+│  ├─ errorHandler.js
+│  └─ rateLimiter.js
 │
 ├─ utils/
-│ ├─ AppError.js
-│ ├─ asyncHandler.js
-│ └─ errors.js
+│  ├─ AppError.js
+│  ├─ asyncHandler.js
+│  └─ errors.js
 │
-├─ app.js Express configuration
-└─ server.js Process lifecycle & startup
+├─ app.js            # Express configuration
+└─ server.js         # Process lifecycle & startup
+
 
 ---
 
