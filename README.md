@@ -18,30 +18,6 @@ This template is designed to be cloned and extended for personal projects, produ
 
 ---
 
-## Project Structure
-
-src/
-├─ api/
-│  ├─ routes/        # Route definitions (HTTP layer)
-│  ├─ controllers/   # Request orchestration
-│  ├─ services/      # Business logic / DB access
-│  └─ config/        # External services (DB, env, etc.)
-│
-├─ middleware/
-│  ├─ errorHandler.js
-│  └─ rateLimiter.js
-│
-├─ utils/
-│  ├─ AppError.js
-│  ├─ asyncHandler.js
-│  └─ errors.js
-│
-├─ app.js            # Express configuration
-└─ server.js         # Process lifecycle & startup
-
-
----
-
 ## Folder Structure
 
 api/
