@@ -1,13 +1,19 @@
 import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
+import morgan from "morgan";
+import helmet from "helmet";
 import { errorHandler } from "./middleware/errorHandler.js";
+import { rateLimiter } from "./middleware/rateLimiter.js";
 
 dotenv.config();
 const app = express();
 
-app.use(express.json());
+app.use(helmet());
+app.use(express.json({ limit: "10kb" }));
+app.use(rateLimiter);
 app.use(cors());
+app.use(morgan("dev"));
 
 app.get("/health", (req, res) => {
   res.status(200).json({
